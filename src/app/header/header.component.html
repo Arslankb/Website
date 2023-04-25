@@ -1,0 +1,30 @@
+
+   <div class="grad-bar"></div>
+   <nav class="navbar">
+    <h1><a routerLink="/"><span>E</span>-Commerce</a></h1>
+     <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'" class="nav no-search">
+        <li class="nav-item"><a routerLink="/" style="margin-left: 20px;"><button class="nav-btn">Home</button></a></li>
+        <li class="nav-item"><a routerLink="/seller-auth" style="margin-left: 20px;"><button class="nav-btn">Seller</button></a></li>
+        <li class="nav-item"><a href="#" style="margin-left: 20px;"><button class="nav-btn">Cart(0)</button></a></li>
+        <li class="nav-item"><a href="#" style="margin-left: 20px;"><button class="nav-btn">Contact Us</button></a></li>
+        <li class="nav-item"><a href="#" style="margin-left: 20px;"><button class="nav-btn">Login</button></a></li>
+      </ul>
+
+
+      <!-- Seller Menu -->
+      <div class="seller-menu">
+        <ul *ngSwitchCase="'seller'" class="nav no-search">
+          <li class="nav-item"><a routerLink="seller-add-product" style="margin-left: 20px;"><button class="seller-btn">Add Product</button></a></li>
+          <li class="nav-item"><a routerLink="seller-home" style="margin-left: 20px;"><button class="seller-btn">Product List</button></a></li>
+          <li class="nav-item"><a (click)="logout()" style="margin-left: 20px;"><button class="seller-btn">Logout</button></a></li>
+          <span class="btn-email">
+            <li class="nav-item"><a href="#" style="margin-left: 20px;"><button class="seller-btn">{{sellerName}}</button></a></li>
+          </span>
+          </ul> 
+      </div>
+     
+
+     </div>
+     <input *ngIf = "menuType === 'default'" class="search-input" type="text" placeholder="Search..">
+   </nav>

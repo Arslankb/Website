@@ -1,0 +1,88 @@
+<div class="container">
+  <div *ngIf="!showLogin" class="signup">
+    <h1>SignUp</h1>
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+      <div class="field-signup">
+        <input type="text" required ngModel name="first-name"  />
+        <label>Enter Your First Name</label>
+      </div>
+      <div class="field-signup">
+        <input type="text" required ngModel name="last-name"  />
+        <label>Enter Your Last Name</label>
+      </div>
+      <div class="field-signup">
+        <input type="text" required ngModel name="email"  email />
+        <label>Enter Your Email</label>
+      </div>
+      <div class="field-signup">
+        <input type="password" required  ngModel name="password" />
+        <label>Enter Password</label>
+      </div>
+      <div class="field-signup">
+        <input type="password" required ngModel name="re-enter password"  />
+        <label>Re-Enter Password</label>
+      </div>
+      <div class="btn-signup">
+        <button>Sign Up</button>
+      </div>
+  
+      <div class="or">
+        <hr class="half-left" />
+        <p class="or-text">OR</p>
+        <hr class="half-right" />
+      </div>
+      <div class="social">
+        <ul>
+          <li>
+            Google
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li>
+            Facebook
+            <span></span><span></span><span></span><span></span>
+          </li>
+        </ul>
+      </div>
+      <div class="signIn">
+        Already have an account?
+        <a (click)="openLogin()">Sign in</a>
+      </div>
+    </form>
+  </div>
+
+
+
+  
+
+  <!-- SignIn Form -->
+
+<div *ngIf="showLogin" class="signin">
+  <h1>Login Form</h1>
+  <p>{{authError}}</p>
+<form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)">
+  <div class="field-signin">
+     <input type="text" ngModel name="email" required email>
+     <label>Email or Phone</label>
+  </div>
+  <div class="field-signin">
+     <input type="password" ngModel name="password" required>
+     <label>Password</label>
+  </div>
+  <div class="forgot-pass">
+     <a href="#">Forgot Password?</a>
+  </div>
+  <div class="btn-login">
+    <button>Login</button>
+  </div>
+  <div class="sign-up">
+     Not a member?
+     <a (click)="openSignUp()">signup now</a>
+  </div>
+</form>
+</div>
+
+</div>
+
+
+
+

@@ -1,0 +1,20 @@
+{
+  "seller": [
+    {
+      "first_name": "Arslan",
+      "last_name": "Khan",
+      "email": "arslan@gmail.com",
+      "password": "abcd@1234",
+      "re-enter password": "abcd@1234",
+      "id": 5
+    },
+    {
+      "first-name": "shahziab",
+      "last-name": "ahmed",
+      "email": "ahmad@gmail.com",
+      "password": "12345",
+      "re-enter password": "12345",
+      "id": 6
+    }
+  ]
+}
